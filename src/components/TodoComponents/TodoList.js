@@ -4,22 +4,22 @@ import React from 'react';
 // feel free to change this component.js into TodoList.js
 
 
-const todos = [
-      {
-            task: 'Organize Garage',
-            id: 1,
-            completed: false
-      },
-      {
-            task: 'Bake Cookies',
-            id: 2,
-            completed: false
-      }
-];
+// const todos = [
+//       {
+//             task: 'Organize Garage',
+//             id: 1,
+//             completed: false
+//       },
+//       {
+//             task: 'Bake Cookies',
+//             id: 2,
+//             completed: false
+//       }
+// ];
 
 
 
-export default todos;
+// export default todos;
 
 // function Todo(props) {
 //       return (
