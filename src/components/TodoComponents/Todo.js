@@ -1,12 +1,13 @@
 import React from 'react';
 
 
-function Todo(props) {
-      return (
-            <div className='todoItem'>
-                  <h3>{props.todo.task}</h3>
-            </div>
-      )
+function Todo (props) {
+     return (
+           <div className='todo-new'>
+                 <h3>{props.orange.task}</h3>  
+      
+           </div>
+     );
 }
 
 export default Todo;

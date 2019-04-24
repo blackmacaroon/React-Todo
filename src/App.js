@@ -5,14 +5,14 @@ import TodoForm from './components/TodoComponents/TodoForm';
 
 const todos = [
   {
-        task: 'Feed Dog',
-        id: '1',
-        completed: false
+    task: 'Feed Dog',
+    id: 1,
+    completed: false
   },
   {
-        task: 'Walk Dog',
-        id: '2',
-        completed: false
+    task: 'Walk Dog',
+    id: 2,
+    completed: false
   }
 ];
 
@@ -58,8 +58,8 @@ class App extends React.Component {
     return (
       <div>
         <h1>DO IT NOW</h1>
-        <TodoList />
-        <TodoForm />
+        <TodoList todosOnState={todos}/>
+        <TodoForm todo={this.state.todo}/>
       </div>
     );
   }
