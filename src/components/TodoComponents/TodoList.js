@@ -18,8 +18,8 @@ const TodoList = (props) => {
       return (
             <div className='todo-list'>
                   {props.todosOnState.map(todo => (
-                        console.log("test")
-                        // <Todo orange={todo} />
+                        // console.log("test")
+                        <Todo orange={todo} />
                   ))}
             </div>
       )

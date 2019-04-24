@@ -39,7 +39,7 @@ class App extends React.Component {
       }
     });
   };
-
+// add a task to the list
   addTodo = event => {
       event.preventDefault();
       this.setState({
