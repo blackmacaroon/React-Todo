@@ -35,13 +35,13 @@ class App extends React.Component {
   };
   
   toggleNeed = id => {
-        const newTODOArrayThatIMade = this.state.todos.map(chore => {
-          if (chore.id === id) {
-            return { ...chore, completed: !chore.completed };
-          }
-          return chore;
-        });
-        this.setState({ todos: newTODOArrayThatIMade });
+    const newTODOArrayThatIMade = this.state.todos.map(chore => {
+      if (chore.id === id) {
+        return { ...chore, completed: !chore.completed };
+      }
+      return chore;
+    });
+    this.setState({ todos: newTODOArrayThatIMade });
         
         // this.setState({
         //   todos: this.state.todos.map(chore =>

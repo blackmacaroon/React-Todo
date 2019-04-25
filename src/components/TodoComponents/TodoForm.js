@@ -28,10 +28,12 @@ class TodoForm extends React.Component {
                   <form onSubmit={this.onOnSubmit}>
                         <input 
                               type= 'text'
-                              name='todo' 
-                              value={this.props.value}
+                              name='input' 
+                              id='id'
+                              value={this.state.input}
                               placeholder='whatcha gonna do?' 
-                              onChange={this.props.handleChanges} />
+                              onChange={this.onUpdate} 
+                        />
                         <button type='submit'>Add To-Do</button>
                   </form>
             )
