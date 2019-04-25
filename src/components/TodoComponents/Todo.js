@@ -5,7 +5,7 @@ function Todo (props) {
 
      return (
            <div className='todo-new'>
-                 <h3>{props.chore.task}</h3>  
+                 <h3 onClick={props.toggleNeed}>{props.chore.task}</h3>  
       
            </div>
      );

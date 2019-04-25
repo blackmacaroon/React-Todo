@@ -68,14 +68,13 @@ form > input {
   font-size: 1rem;
   width: 240px;
   outline: 0;
-  color: green;
   padding-top: 40px;
   border-bottom: 1px solid black;
   margin-bottom: 30px;
 }
 
 button {
-  background-color: green;
+  background-color: rgb(211, 181, 99);
   border: 2px solid black;
   border-radius: 9px;
   color: white;

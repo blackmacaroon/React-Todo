@@ -7,14 +7,13 @@ function TodoList (props) {
       return (
             <div className='todo-list'>
                   {props.todos.map(chore => (
-                        // console.log("test")
                         <Todo 
                         key={chore.id}
                         chore={chore}
                         toggleNeed={props.toggleNeed} />
                   ))}
             </div>
-      )
+      );
 }
 
 export default TodoList;

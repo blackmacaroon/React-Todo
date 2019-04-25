@@ -19,14 +19,16 @@ class TodoForm extends React.Component {
       //prevents button default (referesh), calls addTodo from App, use this.state.input as the argument, creates new todo in App's state
       onOnSubmit = event => {
             event.preventDefault();
+            if (!this.state.input) return false;
             this.props.addTodo(this.state.input);
             this.setState({ input: '' })
+            // console.log('hey')
       };
 
       render() {
             return (
                   <form onSubmit={this.onOnSubmit}>
-                        <input 
+                        <input required
                               type= 'text'
                               name='input' 
                               id='id'
