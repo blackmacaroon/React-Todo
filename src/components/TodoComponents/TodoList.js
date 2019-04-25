@@ -1,25 +1,17 @@
 import React from 'react';
 import Todo from './Todo';
 
-// const todos = [
-//       {
-//         task: 'Feed Dog',
-//         id: 1,
-//         completed: false
-//       },
-//       {
-//         task: 'Walk Dog',
-//         id: 2,
-//         completed: false
-//       }
-//     ];
 
-const TodoList = (props) => {
+
+function TodoList (props) {
       return (
             <div className='todo-list'>
-                  {props.todosOnState.map(todo => (
+                  {props.todos.map(chore => (
                         // console.log("test")
-                        <Todo orange={todo} />
+                        <Todo 
+                        key={chore.id}
+                        chore={chore}
+                        toggleCompleted={props.toggleCompleted} />
                   ))}
             </div>
       )

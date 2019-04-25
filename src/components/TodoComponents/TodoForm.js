@@ -3,20 +3,39 @@ import React from 'react';
 
 
 
-const TodoForm = (props) => {
-      return <div>
-                  <form onSubmit={props.addTodo}>
-                        <input 
-                              name='todo' 
-                              type='text' 
-                              placeholder='whatcha gonna do?' 
-                              value={props.todo.task} 
-                              onChange={props.handleChanges} />
-                        <button>Add To-Do</button>
-                        <button>Clear Completed To-Dos</button>
-                  </form>
-             </div>
-}
+class TodoForm extends React.Component {
+      constructor(props) {
+            super(props);
+            this.state = {
+                  input: ''
+            }
+      };
 
+      // updates local state from the input form
+      onUpdate = event => {
+            this.setState({ [event.target.name]: event.target.value })
+      };
+
+      //prevents button default (referesh), calls addTodo from App, use this.state.input as the argument, creates new todo in App's state
+      onOnSubmit = event => {
+            event.preventDefault();
+            this.props.addTodo(this.state.input);
+            this.setState({ input: '' })
+      };
+
+      render() {
+            return (
+                  <form onSubmit={this.onOnSubmit}>
+                        <input 
+                              type= 'text'
+                              name='todo' 
+                              value={this.props.value}
+                              placeholder='whatcha gonna do?' 
+                              onChange={this.props.handleChanges} />
+                        <button type='submit'>Add To-Do</button>
+                  </form>
+            )
+      }            
+}
 
 export default TodoForm;
