@@ -35,19 +35,34 @@ class App extends React.Component {
       });
   };
   
+
   toggleNeed = id => {
-    console.log('HEY');
-    const newTodoArrayThatIMade = this.state.todos.map(chore => {
-      if (chore.id === id) {
-        console.log('nope');
-        return { ...chore, completed: !chore.completed };
-      }
-      console.log('yep');
-      return chore;
-      
+    this.setState({
+      todos: this.state.todos.map(task => {
+        if (task.id === id) {
+          return {
+            ...task,
+            completed: !task.completed
+          };
+        } else {
+          return task;
+        }
+      })
     });
-    this.setState({ todos: newTodoArrayThatIMade });
-    console.log('check');
+  };
+  // toggleNeed = id => {
+  //   console.log('HEY');
+  //   const newTodoArrayThatIMade = this.state.todos.map(chore => {
+  //     if (chore.id === id) {
+  //       // console.log('nope');
+  //       return { ...chore, completed: !chore.completed };
+  //     }
+  //     // console.log('yep');
+  //     return chore;
+      
+  //   });
+  //   this.setState({ todos: newTodoArrayThatIMade });
+  //   console.log('check');
         
         // this.setState({
         //   todos: this.state.todos.map(chore =>
@@ -55,13 +70,14 @@ class App extends React.Component {
         //   )
         // });
     
-  };
+  // };
 
   removeCompleted = () => {
     const newTodoArray = this.state.todos.filter(chore => {
       return !chore.completed;
     });
     this.setState({ todos: newTodoArray });
+    console.log('bye!')
   };
 
   render() {

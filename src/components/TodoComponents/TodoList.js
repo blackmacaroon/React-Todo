@@ -4,6 +4,7 @@ import Todo from './Todo';
 
 
 function TodoList (props) {
+      // console.log(props);
       return (
             <div className='todo-list'>
                   {props.todos.map(chore => (
