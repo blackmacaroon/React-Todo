@@ -2,7 +2,7 @@ import React from 'react';
 
 
 function Todo (props) {
-      console.log(props)
+      // console.log(props)
      return (
            <div className={props.chore.completed ? "complete" : "todo-new"} onClick={()=>props.toggleNeed(props.chore.id)}>
                  <h3>
